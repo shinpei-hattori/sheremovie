@@ -2,6 +2,7 @@
 session_start();
 require('dbconnect.php');
 require('common.php');
+date_default_timezone_set('Asia/Tokyo');
 // ログイン判定
 if(empty($_SESSION['id'])){
 	header('Location: login.php');
