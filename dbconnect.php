@@ -9,7 +9,7 @@ try{
     $user = $url["user"];
     $password = $url["pass"];
         
-    $dsn = "mysql:dbname=".$db_name.";host=".$db_host."charset=utf8";
+    $dsn = "mysql:dbname=".$db_name.";host=".$db_host.";charset=utf8";
 
     $db=new PDO($dsn,$user,$password,array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
     } catch (PDOException $e){
