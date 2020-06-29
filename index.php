@@ -36,6 +36,7 @@ if(!empty($_POST)){
         if(!empty($_FILES['m_picture']['name'])){
             $image = date('YmdHis') . $_FILES['m_picture']['name'];
             move_uploaded_file($_FILES['m_picture']['tmp_name'],'movie_picture/' . $image);
+
         // 画像がアップされていなければnoneという文字列を指定する
         }else{
 			$image = 'none';
