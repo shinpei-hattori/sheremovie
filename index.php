@@ -28,7 +28,7 @@ if(!empty($_POST)){
 
         var_dump($ext);
         
-        if($ext != 'jpg' && $ext != 'gif' && $ext != 'png' && $ext != 'JPG'){
+        if($ext != 'jpg' && $ext != 'gif' && $ext != 'png' && $ext != 'JPG' && $ext != 'peg'){
             $error['image'] = 'type';
         }
         
