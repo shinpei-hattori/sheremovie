@@ -24,8 +24,9 @@ if(!empty($_POST)){
     // 画像の拡張子が指定のものかチェック
     $fileName = $_FILES['m_picture']['name'];
     if(!empty($fileName)){
-        $ext = substr($fileName,-3);
-        if($ext != 'jpg' && $ext != 'gif' && $ext != 'png' && $ext != 'JPG'){
+        // $ext = substr($fileName,-3);
+        $ext = strrchr($fileName,'.');
+        if($ext != '.jpg' && $ext != '.gif' && $ext != '.png' && $ext != '.JPG'){
             $error['image'] = 'type';
         }
         
