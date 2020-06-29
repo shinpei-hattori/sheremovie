@@ -43,7 +43,7 @@ if(!empty($_POST)){
 			$image = 'none';
         }
         // 投稿内容をDBに保存
-        $movies = $db->prepare('INSERT INTO movies SET member_id=?,title=?,score=?,content=?,m_picture=?,created=NOW()');
+        $movies = $db->prepare('INSERT INTO movies SET member_id=?,title=?,score=?,content=?,m_picture=?,created=NOW() - interval 9 HOUR)');
         $movies->execute(array(
             $_SESSION['id'],
             $post['title'],
